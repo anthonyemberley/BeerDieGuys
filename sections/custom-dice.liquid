@@ -1,0 +1,191 @@
+<div class="dice-cover" style="">
+  <div class="page-width">
+    <div class="dice_cover">
+      <div class="dic_lft">
+        <h2>{{ section.settings.title }}</h2>
+        {{ section.settings.txt }}
+        <div class="dice_block_cover">
+          {% for block in section.blocks %}
+            <div class="dice-block">
+              {% if block.settings.image != blank %}
+                <div class="dice_img">
+                  <img
+                    src="{{ block.settings.image | img_url: 'master' }}"
+                    alt="{{ block.settings.image.alt }}"
+                    loading="lazy"
+                    width="{{ block.settings.image.width }}"
+                    height="{{ block.settings.image.height }}"
+                  >
+                </div>
+              {% endif %}
+              {% if block.settings.dyceimgtxt != blank %}
+                <p>{{ block.settings.dyceimgtxt }}</p>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+        {% if section.settings['btn-name'] != blank %}
+          <a class="custom-primary-btn dice-btn-desk" href="{{ section.settings.btn-url }}">
+            {{- section.settings['btn-name'] }}
+            <img
+              src="https://cdn.shopify.com/s/files/1/0431/0269/9684/files/arrow-right.svg?v=1693204602"
+              alt="Shop Now"
+              width="20"
+              height="20"
+          ></a>
+        {% endif %}
+      </div>
+      <div class="dic_ryt">
+        <div class="dice_video">
+          <div class="img_placeholder">
+            <img
+              src="{{ section.settings.videoimage | img_url: 'master' }}"
+              alt="{{ section.settings.videoimage.alt }}"
+              loading="lazy"
+              width="{{ section.settings.videoimage.width }}"
+              height="{{ section.settings.videoimage.height }}"
+            >
+            <svg
+              id="playButton"
+              xmlns="http://www.w3.org/2000/svg"
+              width="98.347"
+              height="98.347"
+              viewBox="0 0 98.347 98.347"
+            >
+              <path id="Icon_ionic-ios-play-circle" data-name="Icon ionic-ios-play-circle" d="M52.549,3.375a49.174,49.174,0,1,0,49.174,49.174A49.166,49.166,0,0,0,52.549,3.375Zm19.811,50.1L39.924,73.093a1.052,1.052,0,0,1-1.584-.922V32.926A1.048,1.048,0,0,1,39.924,32L72.36,51.627A1.084,1.084,0,0,1,72.36,53.471Z" transform="translate(-3.375 -3.375)" fill="#fff"/>
+            </svg>
+          </div>
+          <video
+            id="videoPlayer"
+            playsinline="playsinline"
+            loop="loop"
+            preload="none"
+            muted="muted"
+            autoplay="autoplay"
+            poster="//beerdieguys.com/cdn/shop/files/preview_images/4f77e8c5e341415a9d8cf1add77efc3a.thumbnail.0000000000_2048x.jpg?v=1692146258"
+          >
+            <source src="{{ section.settings.videourl }}" type="video/mp4">
+            <img
+              src="{{ section.settings.videoimage | img_url: 'master' }}"
+              alt="{{section.settings.videoimage.alt}}"
+              loading="lazy"
+              width="{{ section.settings.videoimage.width }}"
+              height="{{ section.settings.videoimage.height }}"
+            >
+          </video>
+        </div>
+        {% if section.settings['btn-name'] != blank %}
+          <a class="custom-primary-btn dice-btn-mob" href="{{ section.settings.btn-url }}">
+            {{- section.settings['btn-name'] }}
+            <img
+              src="https://cdn.shopify.com/s/files/1/0431/0269/9684/files/arrow-right.svg?v=1693204602"
+              alt="Shop Now"
+          ></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{%- style -%}
+  #shopify-section-{{ section.id }}{
+    padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+    background-color:{{ section.settings.baccolor }};
+  }
+
+  @media screen and (min-width: 989px) {
+     #shopify-section-{{ section.id }}{
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+       background-color:{{ section.settings.baccolor }}
+    }
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Dice",
+  "class": "custom-dice",
+  "settings": [
+    {
+      "type": "color",
+      "id": "baccolor",
+      "label": "Background Color"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "txt",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "btn-name",
+      "label": "Button Text"
+    },
+     {
+      "type": "url",
+      "id": "btn-url",
+      "label": "Button URL"
+    },
+    {
+      "type": "url",
+      "id": "videourl",
+      "label": "Video URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "videoimage",
+      "label": "Video Image"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+         {
+            "type": "text",
+            "id": "dyceimgtxt",
+            "label": "Image Text"
+        }
+       ]
+     }
+   ],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Dice"
+    }
+  ]
+}
+{% endschema %}

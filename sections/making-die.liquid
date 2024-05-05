@@ -1,0 +1,95 @@
+<div class="die-cover" style="">
+  <div class="page-width">
+    <div class="die_cover">
+      <h2><span>{{ section.settings.title }}</span></h2>
+      <div class="mdie_cover">
+       <div class="die-blocks">
+        {% for block in section.blocks %}
+        <div class="die-block">
+          {% if block.settings.makingimage != blank %}
+            <img src="{{ block.settings.makingimage | img_url: 'master' }}" alt="{{ block.settings.makingimage.alt }}" loading="lazy" width="{{ block.settings.makingimage.width }}" height="{{ block.settings.makingimage.height }}">
+          {% endif %}
+          {% if block.settings.makingimgtxt != blank %}
+            <p>{{ block.settings.makingimgtxt }}</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%- style -%}
+  #shopify-section-{{ section.id }}{
+    padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+
+  }
+
+  @media screen and (min-width: 989px) {
+     #shopify-section-{{ section.id }}{
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+       
+    }
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Making Die",
+  "class": "making-die",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+            "type": "image_picker",
+            "id": "makingimage",
+            "label": "Image"
+        },
+         {
+            "type": "text",
+            "id": "makingimgtxt",
+            "label": "Image Text"
+        }
+       ]
+     }
+   ],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Making Die"
+    }
+  ]
+}
+
+{% endschema %}

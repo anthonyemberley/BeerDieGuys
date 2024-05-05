@@ -1,0 +1,148 @@
+<div class="feature_product_content" style="">
+  <div class="page-width">
+    <div class="product_cover">
+      <div class="product_lft">
+        <h2>{{ section.settings.title }}</h2>
+        <div class="rating_img">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32.951" height="31.578" viewBox="0 0 32.951 31.578">
+            <path id="star_1_" data-name="star (1)" d="M32.866,12.424a1.748,1.748,0,0,0-1.508-1.2l-9.511-.864-3.761-8.8a1.751,1.751,0,0,0-3.221,0l-3.761,8.8-9.512.864A1.753,1.753,0,0,0,.6,14.285l7.189,6.3-2.12,9.338a1.749,1.749,0,0,0,2.6,1.892l8.2-4.9,8.2,4.9a1.751,1.751,0,0,0,2.606-1.892l-2.12-9.338,7.189-6.3a1.752,1.752,0,0,0,.514-1.862Zm0,0" transform="translate(0 -0.491)" fill="#a2c6ef"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="32.951" height="31.578" viewBox="0 0 32.951 31.578">
+            <path id="star_1_" data-name="star (1)" d="M32.866,12.424a1.748,1.748,0,0,0-1.508-1.2l-9.511-.864-3.761-8.8a1.751,1.751,0,0,0-3.221,0l-3.761,8.8-9.512.864A1.753,1.753,0,0,0,.6,14.285l7.189,6.3-2.12,9.338a1.749,1.749,0,0,0,2.6,1.892l8.2-4.9,8.2,4.9a1.751,1.751,0,0,0,2.606-1.892l-2.12-9.338,7.189-6.3a1.752,1.752,0,0,0,.514-1.862Zm0,0" transform="translate(0 -0.491)" fill="#a2c6ef"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="32.951" height="31.578" viewBox="0 0 32.951 31.578">
+            <path id="star_1_" data-name="star (1)" d="M32.866,12.424a1.748,1.748,0,0,0-1.508-1.2l-9.511-.864-3.761-8.8a1.751,1.751,0,0,0-3.221,0l-3.761,8.8-9.512.864A1.753,1.753,0,0,0,.6,14.285l7.189,6.3-2.12,9.338a1.749,1.749,0,0,0,2.6,1.892l8.2-4.9,8.2,4.9a1.751,1.751,0,0,0,2.606-1.892l-2.12-9.338,7.189-6.3a1.752,1.752,0,0,0,.514-1.862Zm0,0" transform="translate(0 -0.491)" fill="#a2c6ef"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="32.951" height="31.578" viewBox="0 0 32.951 31.578">
+            <path id="star_1_" data-name="star (1)" d="M32.866,12.424a1.748,1.748,0,0,0-1.508-1.2l-9.511-.864-3.761-8.8a1.751,1.751,0,0,0-3.221,0l-3.761,8.8-9.512.864A1.753,1.753,0,0,0,.6,14.285l7.189,6.3-2.12,9.338a1.749,1.749,0,0,0,2.6,1.892l8.2-4.9,8.2,4.9a1.751,1.751,0,0,0,2.606-1.892l-2.12-9.338,7.189-6.3a1.752,1.752,0,0,0,.514-1.862Zm0,0" transform="translate(0 -0.491)" fill="#a2c6ef"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="32.951" height="31.578" viewBox="0 0 32.951 31.578">
+            <path id="star_1_" data-name="star (1)" d="M32.866,12.424a1.748,1.748,0,0,0-1.508-1.2l-9.511-.864-3.761-8.8a1.751,1.751,0,0,0-3.221,0l-3.761,8.8-9.512.864A1.753,1.753,0,0,0,.6,14.285l7.189,6.3-2.12,9.338a1.749,1.749,0,0,0,2.6,1.892l8.2-4.9,8.2,4.9a1.751,1.751,0,0,0,2.606-1.892l-2.12-9.338,7.189-6.3a1.752,1.752,0,0,0,.514-1.862Zm0,0" transform="translate(0 -0.491)" fill="#a2c6ef"/>
+          </svg>
+        </div>
+        {% if section.settings.productimage != blank %}
+          <img
+            class="product_img desktop"
+            src="{{ section.settings.productimage | img_url: 'master' }}"
+            alt="{{ section.settings.productimage.alt }}"
+            width="{{ section.settings.productimage.width }}"
+            height="{{ section.settings.productimage.height }}"
+          >
+        {% endif %}
+        {% if section.settings.productimagemobile != blank %}
+          <img
+            class="product_img mobile"
+            src="{{ section.settings.productimagemobile | img_url: 'master' }}"
+            alt="{{ section.settings.productimagemobile.alt }}"
+            width="{{ section.settings.productimagemobile.width }}"
+            height="{{ section.settings.productimagemobile.height }}"
+          >
+        {% endif %}
+      </div>
+      <div class="product_ryt">
+        {% if section.settings.chooseproduct != blank %}
+          <div class="prodcut_con">
+            {%- assign product = section.settings.chooseproduct -%}
+
+            <h3>{{ product.title }}</h3>
+            <!-- Start of Judge.me code -->
+              <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
+                {{ product.metafields.judgeme.badge }}
+              </div>
+              <!-- End of Judge.me code -->
+            <span class="price">{{ product.price | money }}</span>
+            <p>{{ product.description | strip_html }}</p>
+            <a class="custom-secondary-button" href="{{ product.url }}">BUY NOW
+              <svg
+                id="Icon_ionic-ios-arrow-dropright"
+                data-name="Icon ionic-ios-arrow-dropright"
+                xmlns="http://www.w3.org/2000/svg"
+                width="29.25"
+                height="29.25"
+                viewBox="0 0 29.25 29.25"
+              >
+                <path id="Path_12" data-name="Path 12" d="M14.815,10.378a1.362,1.362,0,0,1,1.92,0l6.708,6.729a1.356,1.356,0,0,1,.042,1.87l-6.609,6.63a1.355,1.355,0,1,1-1.92-1.912l5.618-5.7-5.759-5.7A1.341,1.341,0,0,1,14.815,10.378Z" transform="translate(-3.375 -3.375)" fill="#fff"/>
+                <path id="Path_13" data-name="Path 13" d="M3.375,18A14.625,14.625,0,1,0,18,3.375,14.623,14.623,0,0,0,3.375,18Zm2.25,0A12.37,12.37,0,0,1,26.747,9.253,12.37,12.37,0,1,1,9.253,26.747,12.269,12.269,0,0,1,5.625,18Z" transform="translate(-3.375 -3.375)" fill="#fff"/>
+              </svg>
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{%- style -%}
+  #shopify-section-{{ section.id }}{
+    padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+    background-color:{{ section.settings.baccolor }};
+  }
+
+  @media screen and (min-width: 989px) {
+     #shopify-section-{{ section.id }}{
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+       background-color:{{ section.settings.baccolor }}
+    }
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Custom Feature Product",
+  "class": "feature-product",
+  "settings": [
+    {
+      "type": "color",
+      "id": "baccolor",
+      "label": "Background Color"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "productimage",
+      "label": "Product Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "productimagemobile",
+      "label": "Product Image Mobile"
+    },
+    {
+      "type": "product",
+      "id": "chooseproduct",
+      "label": "Select Product"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Custom Feature Product"
+    }
+  ]
+}
+{% endschema %}

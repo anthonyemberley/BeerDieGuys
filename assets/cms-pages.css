@@ -1,0 +1,246 @@
+.main-page-title {
+  font-size: 40px; color: #1c2c5b; margin-bottom: 26px !important;
+}
+.all_cms_pages h3 {
+    margin: 30px 0 15px; font-size: 24px; color: #1c2c5b;
+}
+.all_cms_pages h4 {
+    margin: 30px 0 10px; font-size: 22px; color: #1c2c5b;
+}
+.all_cms_pages .content-text .head-h4{
+  margin: 0 0 10px;
+}
+.all_cms_pages p {
+    margin: 0 0 13px; line-height: 28px;
+}
+.all_cms_pages a {
+    text-decoration: none; transition: .5s all; color: #4a8bd8; word-break: break-word;
+}
+.all_cms_pages a:hover {
+  color: #1C2C5B;
+}
+.all_cms_pages u {
+  font-size: 18px
+}
+.all_cms_pages table {
+  margin-bottom: 35px;
+}
+.all_cms_pages table th{
+  font-size: 18px;
+}
+.all_cms_pages table i, td {
+  font-size: 16px;
+}
+.all_cms_pages .content-wrap {
+  display: flex; flex-wrap: wrap; flex-direction: row;
+}
+.all_cms_pages .content-wrap .content-inner {
+  width: 50%;
+}
+.all_cms_pages .content-wrap img {
+  display:block; width: 100%; max-width: 560px; margin: 0 auto; object-fit: cover;
+}
+.all_cms_pages ul {
+  list-style: disc;
+}
+.all_cms_pages ul li {
+  -webkit-text-size-adjust: none;
+}
+.all_cms_pages ul ul {
+  margin-top: 15px; padding-left: 25px; list-style: revert;
+}
+.all_cms_pages.beer-die-rules-page ul{
+  list-style: none;
+}
+.all_cms_pages.beer-die-rules-page li{
+  position: relative;
+}
+.all_cms_pages.beer-die-rules-page li:before{
+   border-left: 2px solid black; content: ""; display: block; height: 8px; left: -13px; position: absolute; top: 10px; transform: rotate(90deg);
+}
+.all_cms_pages.beer-die-rules-page p {
+   -webkit-text-size-adjust: none;
+}
+/* FAQ's CSS start */
+.template-page\.faq .collapsible-content-wrapper-narrow{
+  max-width: 1440px; padding: 0 20px;
+}
+.template-page\.faq .collapsible-content__header {
+  text-align: left !important;
+}
+.template-page\.faq .collapsible-content__heading {
+  margin-bottom: 40px; font-size: 40px; color: #1c2c5b;
+}
+.template-page\.faq .collapsible-row-layout .accordion {
+  padding: 20px;
+}
+.template-page\.faq .collapsible-row-layout .accordion summary, 
+.template-page\.faq .collapsible-row-layout .accordion .accordion__content {
+ background: #f5f5f5; padding: 0;
+}
+.template-page\.faq .collapsible-row-layout .accordion summary {
+   display: flex; justify-content: space-between; align-items: baseline; outline: none; box-shadow: none; border: none; padding: 0;
+}
+.template-page\.faq .collapsible-row-layout .accordion .accordion__content {
+  padding: 0; margin: 15px 0 0;  -webkit-text-size-adjust: none;
+}
+.template-page\.faq .collapsible-row-layout .accordion .accordion__content a{
+  color: #4a8bd8; text-decoration: underline;
+}
+.template-page\.faq .collapsible-content summary .accordion__title{
+  font-size: 18px; color: #1c2c5b;
+}
+.template-page\.faq .collapsible-content summary:hover .accordion__title {
+    text-decoration: none; color: #4a8bd8;
+}
+.template-page\.faq .collapsible-content summary:hover svg path {
+  fill: #4a8bd8;
+}
+.template-page\.faq .collapsible-content details[open] > summary .accordion__title {
+  color: #4a8bd8;
+}
+.template-page\.faq .collapsible-content details[open] > summary svg path {
+  fill: #4a8bd8;
+}
+.template-page\.faq .breadcrumb {
+  margin: 28px 0 0;
+}
+.template-page\.faq .breadcrumb a{
+  font-size: 16px; line-height: 25px; color: #1C2C5B; text-decoration: none;
+}
+.template-page\.faq .breadcrumb .breadcrumb-slash {
+    color: #1C2C5B; padding: 0 3px;
+}
+.template-page\.faq .breadcrumb span {
+  color: #6BAADD; font-size: 16px; line-height: 25px;
+}
+.template-page\.faq .collapsible-content summary .icon-caret{
+  position: unset;
+}
+
+/* FAQ's CSS end */
+
+
+/* CONTACT US css start */
+.template-page\.contact .Form_Wrapper{
+  margin: 0; border-radius: 20PX;
+}
+.template-page\.contact .Form_Wrapper .field {
+  margin-bottom: 30px;
+}
+.template-page\.contact .contact .field__input {
+  border: 1px solid #9f9f9f; border-radius: 27px; font-family: Poppins,sans-serif; padding: 12px 23px; min-height: 50px;line-height: 20px;
+}
+.template-page\.contact .contact .field__input.text-area {
+  min-height: 10rem; border-radius: 15px;
+}
+.template-page\.contact .contact .field__input:focus-visible{
+  box-shadow: unset; outline: unset;
+}
+.template-page\.contact .field:focus-visible {
+  box-shadow: unset; outline: unset;
+}
+.template-page\.contact .contact.page-width {
+  max-width: 800px;
+}
+.template-page\.contact .contact__button .button {
+  max-width: 210px; width: 100%; display: block;
+}
+.template-page\.contact .contact__fields .field:after{
+  box-shadow: none;
+}
+.template-page\.contact .field:after{
+  box-shadow: none;
+}
+.template-page\.contact .form-status-list li{
+  padding-left: 3px;
+}
+/* CONTACT US css end */
+/* Breadcrumb CSS start */
+.breadcrumb {
+  margin: 28px 0 0;
+}
+.breadcrumb a{
+  font-size: 16px; line-height: 25px; color: #1C2C5B; text-decoration: none;
+}
+.breadcrumb .breadcrumb-slash {
+    color: #1C2C5B; padding: 0 3px;
+}
+.breadcrumb span {
+  color: #6BAADD; font-size: 16px; line-height: 25px;
+}
+/* Breadcrumb CSS end */
+
+
+@media screen and (max-width: 1200px) {
+  .all_cms_pages .content-wrap img {
+    max-width: 460px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  /* .all_cms_pages .content-wrap {
+      flex-direction: column-reverse;
+  } */
+  .all_cms_pages .text-content{
+    margin-bottom: 30px;
+  }
+  .all_cms_pages h4{
+    margin: 20px 0 10px;
+  }
+  .all_cms_pages .content-wrap .content-inner {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-page-title {
+      font-size: 28px;
+    }
+  .all_cms_pages h3 {
+      margin: 30px 0 10px;
+  }
+  .all_cms_pages h3 {
+      font-size: 22px;
+  }
+  .all_cms_pages table i, td {
+      font-size: 14px;
+  }
+  .template-page\.faq .collapsible-content__heading {
+      font-size: 26px;
+  }
+  .template-page\.faq .collapsible-content__heading {
+    margin-bottom: 30px;
+  }
+  .template-page\.faq .accordion{
+    margin-top: 0;
+  }
+  .template-page\.contact .Form_Wrapper .field{
+    margin-bottom: 20PX;
+  }
+  .template-page\.faq .collapsible-content summary .accordion__title {
+    font-size: 16px;
+  }
+  .template-page\.faq .breadcrumb span {
+    font-size: 14px;
+  }
+  .template-page\.faq .breadcrumb a {
+    font-size: 14px;
+  }
+  .breadcrumb a{
+    font-size: 14px;
+  }
+   .breadcrumb span{
+     font-size: 14px;
+   }
+}
+
+@media screen and (max-width: 575px) {
+  .breadcrumb {
+    margin: 20px 0 0;
+  }
+  
+  .template-page\.contact .contact__button .button {
+    max-width: 100%;
+  }
+}

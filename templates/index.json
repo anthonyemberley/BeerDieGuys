@@ -1,0 +1,330 @@
+{
+    "sections": {
+        "10939e87-96f2-4048-afa7-684701aeb167": {
+            "type": "csm-banner",
+            "settings": {
+                "bacimage": "shopify:\/\/shop_images\/homepage_desktop_banner_1.png",
+                "bacimagemobile": "shopify:\/\/shop_images\/homepage_cup_bannerboi_2.png",
+                "title": "",
+                "tagline": "",
+                "txt_color": "#ffffff",
+                "btn1name": "",
+                "btn1url": "shopify:\/\/collections\/beerdietables",
+                "btn2name": "",
+                "btn2url": "shopify:\/\/collections\/dice-and-cups",
+                "banner_url": "shopify:\/\/collections\/all-products",
+                "padding_top": 0,
+                "padding_bottom": 20
+            }
+        },
+        "f106fe6e-16f0-417b-90f2-62418e2c2d2a": {
+            "type": "brands",
+            "blocks": {
+                "340bf22b-be4f-46f0-b618-b3490241fca6": {
+                    "type": "slide",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/two_friends_new.png",
+                        "brand-txt": "<p>\"These dice are sick.\"<\/p>"
+                    }
+                },
+                "78b5b4f8-abfc-4527-afda-2f54193282c6": {
+                    "type": "slide",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/mosea.png",
+                        "brand-txt": "<p>\"Awesome custom table.\"<\/p>"
+                    }
+                },
+                "8216d6fe-3977-452f-8b8c-a3a2aa243460": {
+                    "type": "slide",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/going.png",
+                        "brand-txt": "<p>\"Stoked for the dice.\"<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "340bf22b-be4f-46f0-b618-b3490241fca6",
+                "78b5b4f8-abfc-4527-afda-2f54193282c6",
+                "8216d6fe-3977-452f-8b8c-a3a2aa243460"
+            ],
+            "disabled": true,
+            "settings": {
+                "title": "",
+                "padding_top": 56,
+                "padding_bottom": 96
+            }
+        },
+        "9efa34d4-36c7-441c-8570-499b2bc67933": {
+            "type": "best-seller",
+            "settings": {
+                "custom_class": "",
+                "title": "Best Sellers",
+                "collection": "best-sellers",
+                "products_to_show": 8,
+                "image_ratio": "adapt",
+                "image_shape": "default",
+                "show_secondary_image": false,
+                "show_vendor": false,
+                "show_rating": true,
+                "enable_quick_add": true,
+                "padding_top": 0,
+                "padding_bottom": 14
+            }
+        },
+        "5ef11000-a0e0-421f-86a6-f67048dd293a": {
+            "type": "custom-dice",
+            "blocks": {
+                "e7eafa9c-d846-49ea-bfcb-65eb863d4ed6": {
+                    "type": "slide",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/camera.svg",
+                        "dyceimgtxt": "Upload your photo"
+                    }
+                },
+                "7703fa25-ae5a-4df3-a415-955f9c4dfc35": {
+                    "type": "slide",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/brush.svg",
+                        "dyceimgtxt": "Choose your <br> dot color"
+                    }
+                },
+                "56ab52ec-e038-4539-8e63-a883b8201a0a": {
+                    "type": "slide",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/settings.svg",
+                        "dyceimgtxt": "Engineered for better bounces"
+                    }
+                }
+            },
+            "block_order": [
+                "e7eafa9c-d846-49ea-bfcb-65eb863d4ed6",
+                "7703fa25-ae5a-4df3-a415-955f9c4dfc35",
+                "56ab52ec-e038-4539-8e63-a883b8201a0a"
+            ],
+            "settings": {
+                "baccolor": "#79B7DD",
+                "title": "Customize Your Dice",
+                "txt": "<p><em>Dice made for you, by you.<\/em><\/p>",
+                "btn-name": "SHOP NOW",
+                "btn-url": "shopify:\/\/products\/custom-dice",
+                "videourl": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3860bda1c2cd4994acd4662941efa7bd.mp4",
+                "videoimage": "shopify:\/\/shop_images\/custom-dice.png",
+                "padding_top": 100,
+                "padding_bottom": 100
+            }
+        },
+        "14e931ec-9c45-4f12-bab9-536a2cae7479": {
+            "type": "fellow-tossers-review",
+            "disabled": true,
+            "settings": {
+                "title": "From Fellow Tossers",
+                "reviewimage": "shopify:\/\/shop_images\/reviewimage.png",
+                "reviewimagem": "shopify:\/\/shop_images\/Group_350.png",
+                "padding_top": 100,
+                "padding_bottom": 52
+            }
+        },
+        "rich_text_qn6kmL": {
+            "type": "rich-text",
+            "blocks": {
+                "heading_RzfDCc": {
+                    "type": "heading",
+                    "settings": {
+                        "heading": "Don't Just Take It From Us",
+                        "heading_size": "h1"
+                    }
+                }
+            },
+            "block_order": [
+                "heading_RzfDCc"
+            ],
+            "settings": {
+                "desktop_content_position": "center",
+                "content_alignment": "center",
+                "color_scheme": "background-2",
+                "full_width": true,
+                "padding_top": 80,
+                "padding_bottom": 30
+            }
+        },
+        "170852080034b30eec": {
+            "type": "apps",
+            "blocks": {
+                "loox_reviews_loox_card_carousel_section_JEQbfr": {
+                    "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-card-carousel-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+                    "settings": {
+                        "maxWidth": 1100,
+                        "borderRadius": 8,
+                        "itemsPerView": 4,
+                        "mobileItemsPerView": 1,
+                        "maxNumberOfCharacters": 100,
+                        "imageRatio": "0.72",
+                        "reviewerNameColor": "#000000",
+                        "textColor": "#000000",
+                        "itemBackgroundColor": "#ffffff",
+                        "starsColor": "",
+                        "starsBackgroundColor": "#ffffff",
+                        "arrows_backgroundColor": "#ffffff",
+                        "arrows_iconColor": "#9a9a9a",
+                        "shadow": "offset-dark",
+                        "border_active": false,
+                        "border_width": 2,
+                        "border_color": "#000000",
+                        "productIds": ""
+                    }
+                }
+            },
+            "block_order": [
+                "loox_reviews_loox_card_carousel_section_JEQbfr"
+            ],
+            "settings": {
+                "include_margins": true
+            }
+        },
+        "e0bfe48e-62ef-4de5-bf83-5af0eba11ec3": {
+            "type": "custom-feature-product",
+            "disabled": true,
+            "settings": {
+                "baccolor": "#79B7DD",
+                "title": "25+ 5-Star Reviews!",
+                "productimage": "shopify:\/\/shop_images\/Group_352_8d0600af-ddfd-4950-8b1b-780082ba1eed.png",
+                "productimagemobile": "shopify:\/\/shop_images\/beer-table_9602a29b-234b-4c8a-a2dc-7e69ee30f867.png",
+                "chooseproduct": "bdg-portable-beer-die-table",
+                "padding_top": 90,
+                "padding_bottom": 90
+            }
+        },
+        "image_with_text_R7BTYL": {
+            "type": "image-with-text",
+            "blocks": {
+                "heading_HJ3zTg": {
+                    "type": "heading",
+                    "settings": {
+                        "heading": "10,000+ pounds of plastic removed from our Oceans!",
+                        "heading_size": "h1"
+                    }
+                },
+                "text_tzqyNa": {
+                    "type": "text",
+                    "settings": {
+                        "text": "<p>Our high-quality, eco-friendly products continue to make Beer Die better! We are proud partners of the Ocean Blue Project and proud of the positive impacts our products have had on the game and the environment!<\/p>",
+                        "text_style": "body"
+                    }
+                },
+                "button_KXqz8h": {
+                    "type": "button",
+                    "settings": {
+                        "button_label": "Learn More",
+                        "button_link": "shopify:\/\/pages\/our-story",
+                        "button_style_secondary": false
+                    }
+                }
+            },
+            "block_order": [
+                "heading_HJ3zTg",
+                "text_tzqyNa",
+                "button_KXqz8h"
+            ],
+            "settings": {
+                "image": "shopify:\/\/shop_images\/homepage_oceans_pic.png",
+                "height": "adapt",
+                "desktop_image_width": "medium",
+                "layout": "image_first",
+                "desktop_content_position": "top",
+                "desktop_content_alignment": "left",
+                "content_layout": "no-overlap",
+                "color_scheme": "",
+                "image_behavior": "none",
+                "mobile_content_alignment": "left",
+                "padding_top": 100,
+                "padding_bottom": 36
+            }
+        },
+        "b184614a-ab2d-4b13-879b-11275735b3e5": {
+            "type": "making-die",
+            "blocks": {
+                "39100aac-7c3c-413f-a728-c27e80250077": {
+                    "type": "slide",
+                    "settings": {
+                        "makingimage": "shopify:\/\/shop_images\/tables.svg",
+                        "makingimgtxt": "Toss Anywhere"
+                    }
+                },
+                "a0d299a2-342a-4460-9040-d6f8e539d0b4": {
+                    "type": "slide",
+                    "settings": {
+                        "makingimage": "shopify:\/\/shop_images\/satisfaction.svg",
+                        "makingimgtxt": "High Quality"
+                    }
+                },
+                "30e6500c-7f8a-40f6-993f-d4122952a27c": {
+                    "type": "slide",
+                    "settings": {
+                        "makingimage": "shopify:\/\/shop_images\/charity.svg",
+                        "makingimgtxt": "Ocean Cleanup"
+                    }
+                },
+                "9bc376bc-08d5-4937-9867-3fcc1ced3c23": {
+                    "type": "slide",
+                    "settings": {
+                        "makingimage": "shopify:\/\/shop_images\/friendly-dice.svg",
+                        "makingimgtxt": "Eco-Friendly"
+                    }
+                },
+                "7d9c01a0-b053-4b7f-a4f2-8d8eff08a626": {
+                    "type": "slide",
+                    "settings": {
+                        "makingimage": "shopify:\/\/shop_images\/customize-dice.svg",
+                        "makingimgtxt": "Customizable"
+                    }
+                }
+            },
+            "block_order": [
+                "39100aac-7c3c-413f-a728-c27e80250077",
+                "a0d299a2-342a-4460-9040-d6f8e539d0b4",
+                "30e6500c-7f8a-40f6-993f-d4122952a27c",
+                "9bc376bc-08d5-4937-9867-3fcc1ced3c23",
+                "7d9c01a0-b053-4b7f-a4f2-8d8eff08a626"
+            ],
+            "settings": {
+                "title": "Beer Die Made Better",
+                "padding_top": 80,
+                "padding_bottom": 100
+            }
+        },
+        "beaabc86-a4de-44ca-aacc-4ae293a3683a": {
+            "type": "health-support",
+            "disabled": true,
+            "settings": {
+                "baccolor": "#f2f1ec",
+                "title": "We Believes in <br>Mental Health Support <br>for Everyone",
+                "txt": "<p>Our goal is to help 1.5 million men by 2024. That’s why we set aside 1% of our sales: to support nonprofits providing mental health care services to men in need.<\/p>",
+                "btn-name": "LEARN MORE",
+                "btn-url": "#",
+                "image": "shopify:\/\/shop_images\/mental-health-support.png",
+                "padding_top": 100,
+                "padding_bottom": 90
+            }
+        },
+        "17085352172e9b10f3": {
+            "type": "apps",
+            "settings": {
+                "include_margins": true
+            }
+        }
+    },
+    "order": [
+        "10939e87-96f2-4048-afa7-684701aeb167",
+        "f106fe6e-16f0-417b-90f2-62418e2c2d2a",
+        "9efa34d4-36c7-441c-8570-499b2bc67933",
+        "5ef11000-a0e0-421f-86a6-f67048dd293a",
+        "14e931ec-9c45-4f12-bab9-536a2cae7479",
+        "rich_text_qn6kmL",
+        "170852080034b30eec",
+        "e0bfe48e-62ef-4de5-bf83-5af0eba11ec3",
+        "image_with_text_R7BTYL",
+        "b184614a-ab2d-4b13-879b-11275735b3e5",
+        "beaabc86-a4de-44ca-aacc-4ae293a3683a",
+        "17085352172e9b10f3"
+    ]
+}

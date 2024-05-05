@@ -1,0 +1,106 @@
+<div class="hs-content" style="">
+  <div class="page-full-width">
+    <div class="health_cover">
+      <div class="hasupport_lft">
+        <h2>{{ section.settings.title }}</h2>
+        {{ section.settings.txt }}
+        {% if section.settings.btn-name != blank %}
+        <a class="custom-primary-btn" href="{{ section.settings.btn-url }}">{{ section.settings.btn-name }}</a>
+        {% endif  %}
+      </div>
+       <div class="health-full-image">
+       <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" width="{{ section.settings.image.width }}" height="{{ section.settings.image.height }}" />
+  </div>
+    </div>
+    
+  </div>
+ 
+</div>
+{%- style -%}
+  #shopify-section-{{ section.id }}{
+    padding-top:0;
+    padding-bottom:0;
+    background-color:{{ section.settings.baccolor }};
+  }
+  .hs-content .hasupport_lft{
+      padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+  }
+  @media screen and (min-width: 1279px) {
+     #shopify-section-{{ section.id }}{
+      padding-top:0;
+    padding-bottom:0;
+       background-color:{{ section.settings.baccolor }}
+    }
+     .hs-content .hasupport_lft{
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Health Support",
+  "class": "health-support",
+  "settings": [
+    {
+      "type": "color",
+      "id": "baccolor",
+      "label": "Background Color"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "txt",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "btn-name",
+      "label": "Button Text"
+    },
+     {
+      "type": "url",
+      "id": "btn-url",
+      "label": "Button URL"
+    },
+    {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Health Support"
+    }
+  ]
+}
+
+{% endschema %}

@@ -1,0 +1,68 @@
+
+<div class="product-cstm-img page-width">
+  {% assign image_object_desk_1 = product.metafields.custom.custom_image_desktop_1.value %}
+  {% assign image_object_mob_1 = product.metafields.custom.custom_image_mobile_1.value %}
+  {% if product.metafields.custom.custom_image_desktop_1 != blank %}
+  <div class="product-img-cover">
+      <img loading="lazy" class="product-desk-img" src="{{ image_object_desk_1 | image_url }}" alt="{{ image_object_desk_1.alt }}" width="{{ image_object_desk_1.width }}" height="{{ image_object_desk_1.height }} " />
+      <img loading="lazy" class="product-mob-img" src="{{ image_object_mob_1 | image_url }}" alt="{{ image_object_mob_1.alt }}" width="{{ image_object_mob_1.width }}" height=" {{ image_object_mob_1.height }} " />
+  </div>
+  {% endif %}
+
+  {% assign image_object_desk_2 = product.metafields.custom.custom_image_desktop_2.value %}
+  {% assign image_object_mob_2 = product.metafields.custom.custom_image_mobile_2.value %}
+   {% if product.metafields.custom.custom_image_desktop_2 != blank %}
+  <div class="product-img-cover">
+      <img loading="lazy" class="product-desk-img" src="{{ image_object_desk_2 | image_url }}" alt="{{ image_object_desk_2.alt }}" width="{{ image_object_desk_2.width }}" height=" {{ image_object_desk_2.height }} " />
+      <img loading="lazy" class="product-mob-img" src="{{ image_object_mob_2 | image_url }}" alt="{{ image_object_mob_2.alt }}" width="{{ image_object_mob_2.width }}" height=" {{ image_object_mob_2.height }} " />
+  </div>
+  {% endif %}
+</div>
+
+{%- style -%}
+  #shopify-section-{{ section.id }}{
+    padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+     #shopify-section-{{ section.id }}{
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+
+    }
+  }
+{%- endstyle -%}
+
+{% schema %}
+  {
+    "name": "Product Custom Images",
+    "settings": [
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 52
+      }
+  ],
+  "presets": [
+    {
+      "name": "Product Custom Images"
+    }
+  ]
+  }
+{% endschema %}

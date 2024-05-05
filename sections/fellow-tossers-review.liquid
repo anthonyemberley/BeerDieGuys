@@ -1,0 +1,95 @@
+<div class='review-carousel-wrapper' data-auto-install='false' > 
+  <div class="page-width">
+  {% assign jm_metafields = shop.metafields.judgeme %} 
+	<div class='review-carousel-title-and-link'> 
+  	  <h2 class='review-carousel-title'>{{ section.settings.title }}</h2> 
+		<span class='jdgm-all-reviews-rating-wrapper' href='javascript:void(0)'>
+            <span style='display:block'  data-score='{{ jm_metafields.all_reviews_rating }}' class='jdgm-all-reviews-rating' aria-label='{{ jm_metafields.all_reviews_rating }} stars' tabindex='0' role='img'></span>
+            <span style='display: block' class='jdgm-carousel-number-of-reviews' data-number-of-reviews='{{ jm_metafields.all_reviews_count }}'>
+              from {{ shop.metafields.judgeme.all_reviews_count }} reviews
+            </span>
+          </span>
+	</div> 
+	<div class="review_wrapper">
+      <div class="re_left">
+        <img class="desk_img" src="{{ section.settings.reviewimage | img_url: 'master' }}" alt="{{ section.settings.reviewimage.alt }}" loading="lazy" width="{{ section.settings.reviewimage.width }}" height="{{ section.settings.reviewimage.height }}">
+        <img class="mob_img" src="{{ section.settings.reviewimagem | img_url: 'master' }}" alt="{{ section.settings.reviewimagem.alt }}" loading="lazy" width="{{ section.settings.reviewimagem.width }}" height="{{ section.settings.reviewimagem.height }}">
+      </div>
+	<div class="re_right">
+     <!-- Start of Judge.me code -->
+      <div class='jdgm-carousel-wrapper' data-auto-install='false' >
+        {% assign jm_metafields = shop.metafields.judgeme %}
+        {{ jm_metafields.featured_carousel }}
+      </div>
+      <!-- End of Judge.me code -->
+    </div>
+    </div>
+  </div>
+</div>
+
+{%- style -%}
+  #shopify-section-{{ section.id }}{
+    padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+   
+  }
+
+  @media screen and (min-width: 989px) {
+     #shopify-section-{{ section.id }}{
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      
+    }
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Fellow Tossers Review",
+  "class": "tossers-review",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "reviewimage",
+      "label": "Review Image"
+    },
+     {
+      "type": "image_picker",
+      "id": "reviewimagem",
+      "label": "Review Image Mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Fellow Tossers Review"
+    }
+  ]
+}
+
+{% endschema %}

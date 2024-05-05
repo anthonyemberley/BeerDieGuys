@@ -1,0 +1,121 @@
+<div class="banner_content" style="">
+  <div class="bnr_img">
+    {% if section.settings.banner_url != blank %}
+    <a href="{{ section.settings.banner_url }}">
+      {% endif %}
+  <img loading="lazy" class="desk_banner" src="{{ section.settings.bacimage | img_url: 'master' }}" alt="{{ section.settings.bacimage.alt }}" width="{{ section.settings.bacimage.width }}" height=" " />
+  <img loading="lazy" class="mobile_banner" src="{{ section.settings.bacimagemobile | img_url: 'master' }}" alt="{{ section.settings.bacimagemobile.alt }}" width="{{ section.settings.bacimagemobile.width }}" height=" " />
+  {% if section.settings.banner_url != blank %}  </a>{% endif %}
+    </div>
+  <div class="page-width">
+    <div class="banner_content_cover">
+     {% if section.settings.title != blank %} <h2 style="color:{{ section.settings.txt_color }};">{{ section.settings.title }}</h2>{% endif %}
+      {% if section.settings.tagline != blank %} <p style="color:{{ section.settings.txt_color }};">{{ section.settings.tagline }}</p>{% endif %}
+      <div class="btn_group">
+       {% if section.settings.btn1name != blank %} <a class="custom-primary-btn" href="{{ section.settings.btn1url }}">{{ section.settings.btn1name }}</a>{% endif %}
+        {% if section.settings.btn2url != blank %}<a class="custom-primary-btn" href="{{ section.settings.btn2url }}">{{ section.settings.btn2name }}</a>{% endif %}
+      </div>
+  </div>
+  </div>
+</div>
+{%- style -%}
+  #shopify-section-{{ section.id }}{
+    padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+     #shopify-section-{{ section.id }}{
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+
+    }
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Custom Banner",
+  "class": "custom-banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bacimage",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bacimagemobile",
+      "label": "Background Image Mobile"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline"
+    },
+    {
+      "type": "color",
+      "id": "txt_color",
+      "label": "Text Color"
+    },
+    {
+      "type": "text",
+      "id": "btn1name",
+      "label": "Button Name"
+    },
+    {
+      "type": "url",
+      "id": "btn1url",
+      "label": "Button URL"
+    },
+    {
+      "type": "text",
+      "id": "btn2name",
+      "label": "Button Name 2"
+    },
+    {
+      "type": "url",
+      "id": "btn2url",
+      "label": "Button URL 2"
+    },
+    {
+      "type": "url",
+      "id": "banner_url",
+      "label": "Banner Link"
+    },
+    
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Custom Banner"
+    }
+  ]
+}
+
+{% endschema %}
